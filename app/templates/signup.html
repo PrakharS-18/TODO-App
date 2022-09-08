@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+<!-- we will use templating language that allows us to write python code inside a html file-->
+
+{% block content %}
+
+<div class="container pt-4">
+    <div class="col-lg-5 shadow mx-auto ">
+    <div class="alert alert-danger" role="alert">
+        <h2>Create Account</h2>
+    </div>
+    <div class="p-4">
+        <form action="/signup/" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <hr>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</div>
+</div>
+
+{% endblock content %}
+
+
+
+
